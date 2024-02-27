@@ -9,3 +9,8 @@ function show(){
 
 fade_layer.addEventListener("click",show)
 menubutton.addEventListener("click",show)
+
+let slideIndex = 1
+function slideMove(n) {
+    slideIndex += n
+}
