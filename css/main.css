@@ -29,6 +29,7 @@ header {
     position: fixed;
     justify-content: flex-start;
     /* background-color: lightslategrey; */
+    z-index: 5;
 }
 
 .menu-button {
@@ -87,29 +88,41 @@ main {
 }
 
 .carousel {
-    display:flex;
-    height: 60vh;
+    /* height: 100%; */
     width: 100%;
 }
 
-.slideshow-button {
+/* .slideshow-button {
     height: min-content;
     width: min-content;
     border: 0.5vh solid white;
     text-align: center; 
     border-radius: 50%;
-}
+} */
 
 .slide-images {
-    max-height: 50vh;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
+    width: 75%;
+    height: 75vh;
+    /* margin-right: 20vw; */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 
+#slide1 {
+    /* background-image: url(../img/astroboy.jpg); */
+}
+#slide2 {
+    /* background-image: url(../img/rockets_launching.jpg); */
+}
+#slide3 {
+    /* background-image: url(../img/space_view.jpg); */
 }
 
 .landing-link-section {
     height: 110vh;
+    margin-top: 5vh;
 }
 
 @media screen and (max-width: 500px) {
@@ -125,3 +138,4 @@ main {
         padding: 3vw;
     }
 }
+

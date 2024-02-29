@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/flickity.css" media="screen">
 </head>
 
 <body>
@@ -34,14 +35,14 @@
 
         </main>
         <section class="landing-image-scroller">
-            <div class="carousel">
-                <img class="slide-images" src="img/astroboy.jpg">
-                <img class="slide-images" src="img/rockets_launching.jpg">
-                <img class="slide-images" src="img/space_view.jpg">
+            <div class="carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+                <div class="slide-images"><img id="slide1" src="img/astroboy.jpg"></div>
+                <div class="slide-images"><img id="slide2" src="img/rockets_launching.jpg"></div>
+                <div class="slide-images"><img id="slide3" src="img/space_view.jpg"></div>
             </div>
 
-            <button class="slideshow-button slideshow-left" onclick="slideMove(-1)">&#10094;</button> 
-            <button class="slideshow-button slideshow-right" onclick="slideMove(+1)">&#10095;</button>
+            <!-- <button class="slideshow-button slideshow-left" onclick="slideMove(-1)"></button> 
+            <button class="slideshow-button slideshow-right" onclick="slideMove(+1)"></button> -->
         </section>
         
         <section class="landing-link-section">
@@ -53,6 +54,7 @@
         </section>
     </div>
     <script src="js/main.js"></script>
+    <script src="js/flickity.pkgd.js"></script>
 </body>
 
 </html>
