@@ -3,7 +3,6 @@
 }
 
 body {
-    background-color: #0b0f2b;
     color: white;
 }
 
@@ -33,6 +32,10 @@ body {
 
 .secondary-text {
     color: #e0e0e0;
+}
+
+a {
+    color:#005992
 }
 
 a:visited {
@@ -73,6 +76,14 @@ header {
     font-size: 1vw;
 }
 
+.burger {
+    margin: 2.1vh 30%;
+    background-color: white;
+    height: 0.6vh;
+    width: 40%;
+    border-radius: 1vw;
+}
+
 .fade-layer {
     position: fixed;
     top: 0;
@@ -89,7 +100,7 @@ header {
     display: block;
 }
 
-h1 {
+header h1 {
     align-self:flex-end;
     font-size: 48px;
 }
@@ -179,6 +190,57 @@ h1 {
 #europa-card img{
     width: auto;
     height: 25vh;
+}
+
+
+/* för about-sidan */
+.tech-image {
+    height: 90vh;
+    width: 100%;
+    padding-top: 10vh;
+}
+
+.section-header {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 30vh;
+    box-shadow: 10vh 0 5vh black, -10vh 0 5vh black;
+}
+
+.section-header h1 {
+    align-self: auto;
+}
+
+.cool-part {
+    display: grid;
+    width: 100%;
+    height: 120vh;
+    column-gap: 10%;
+    grid-template-columns: 35% 55%;
+    grid-template-areas: 
+    'cool normie'
+}
+
+.sticky {
+    grid-area: cool;
+}
+
+.sticky img {
+    width: 100%;
+    border-radius: 3vw;
+    position: sticky;
+    top: 10vh;
+}
+
+.third-image {
+    grid-area: normie;
+}
+
+.last-part {
+    height: 120vh;
+    width: 100%;
 }
 
 @media screen and (max-width: 600px) {
