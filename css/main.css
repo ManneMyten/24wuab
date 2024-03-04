@@ -74,7 +74,6 @@ header {
     width: 10%;
     height: 10vh;
     font-size: 1vw;
-    position: relative;
     z-index: 11;
 }
 
@@ -92,7 +91,6 @@ header {
 
 .reverse-one {
     animation: reverse-first 1s forwards;
-    /* animation-fill-mode: backwards; */
 }
 
 .animation-two {
@@ -101,7 +99,6 @@ header {
 
 .reverse-two {
     animation: reverse-second 1s forwards;
-    /* animation-fill-mode: backwards; */
 }
 
 .animation-3 {
