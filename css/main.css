@@ -66,7 +66,7 @@ header {
     height: 10vh;
     position: fixed;
     justify-content: flex-start;
-    z-index: 5;
+    z-index: 11;
     transition: all 1s;
 }
 
@@ -74,6 +74,8 @@ header {
     width: 10%;
     height: 10vh;
     font-size: 1vw;
+    position: relative;
+    z-index: 11;
 }
 
 .burger {
@@ -84,8 +86,66 @@ header {
     border-radius: 1vw;
 }
 
-#burger-one {
-    
+.animation-one {
+    animation: first 1s forwards;
+}
+
+.reverse-one {
+    animation: reverse-first 1s forwards;
+    /* animation-fill-mode: backwards; */
+}
+
+.animation-two {
+    animation: second 1s forwards;
+}
+
+.reverse-two {
+    animation: reverse-second 1s forwards;
+    /* animation-fill-mode: backwards; */
+}
+
+.animation-3 {
+    animation: third 1s forwards;
+}
+
+.reverse-3 {
+    animation: reverse-third 1s forwards;
+}
+
+@keyframes first {
+    0% {transform: translateY(0)}
+    50% {transform: translateY(2.8vh)}
+    100% {transform: translateY(2.8vh) rotate(45deg);}
+}
+
+@keyframes reverse-first {
+    0% {transform: translateY(2.8vh) rotate(45deg);}
+    50% {transform: translateY(2.8vh)}
+    100% {transform: translateY(0);}
+}
+
+@keyframes second {
+    0% {}
+    50% {transform: rotate(0)}
+    100% {transform: rotate(-45deg);}
+}
+
+@keyframes reverse-second {
+    0% {transform: rotate(-45deg)}
+    50% {transform: rotate(0)}
+    100% {}
+}
+
+@keyframes third {
+    0% {transform: translateY(0)}
+    50% {transform: translateY(-2.8vh)}
+    100% {transform: translateY(-2.8vh) rotate(45deg);}
+}
+
+@keyframes reverse-third {
+    0% {transform: translateY(-2.8vh) rotate(45deg);}
+    50% {transform: translateY(-2.8vh)}
+    100% {transform: translateY(0);}
 }
 
 .fade-layer {
