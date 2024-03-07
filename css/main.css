@@ -255,18 +255,28 @@ header h1 {
 
 
 /* för about-sidan */
-.tech-image {
-    height: 90vh;
+.container {
+    display: grid;
     width: 100%;
+    grid-template-rows: 90vh 30vh 140vh 120vh;
+    grid-template-columns: 35% 65%;
     padding-top: 10vh;
+    grid-template-areas: 
+    't-img t-img'
+    'hd hd'
+    'cool img3'
+    'lst lst'
+}
+
+.tech-image {
+    grid-area: t-img;
 }
 
 .section-header {
+    grid-area: hd;
     display:flex;
     justify-content: center;
     align-items: center;
-    width:100%;
-    height: 30vh;
     box-shadow: 10vh 0 5vh black, -10vh 0 5vh black;
 }
 
@@ -275,33 +285,29 @@ header h1 {
 }
 
 .cool-part {
-    display: grid;
-    width: 100%;
-    height: 120vh;
-    column-gap: 10%;
-    grid-template-columns: 35% 55%;
-    grid-template-areas: 
-    'cool normie'
-}
-
-.sticky {
     grid-area: cool;
 }
 
-.sticky img {
-    width: 100%;
-    border-radius: 3vw;
+.sticky {
     position: sticky;
     top: 10vh;
 }
 
+.sticky img {
+    width: 100%;
+    border-radius: 2vw;
+}
+
 .third-image {
-    grid-area: normie;
+    grid-area: img3;
+}
+
+.third-image img {
+    width: 100%;
 }
 
 .last-part {
-    height: 120vh;
-    width: 100%;
+    grid-area: lst;
 }
 
 @media screen and (max-width: 600px) {
