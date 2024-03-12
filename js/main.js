@@ -24,3 +24,19 @@ function show(){
 
 fade_layer.addEventListener("click",show)
 menubutton.addEventListener("click",show)
+
+
+const texts = document.querySelectorAll(".text")
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("show", entry.isIntersecting)
+    })
+    console.log(entries)
+}, {
+    threshold: 0.7,
+})
+
+texts.forEach(text => {
+    observer.observe(text)
+})

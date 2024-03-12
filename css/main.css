@@ -4,6 +4,7 @@
 
 body {
     color: white;
+    overflow-x: hidden;
 }
 
 .dark-bg {
@@ -258,18 +259,20 @@ header h1 {
 .container {
     display: grid;
     width: 100%;
-    grid-template-rows: 90vh 30vh 140vh 120vh;
+    grid-template-rows: 90vh 30vh 135vh 120vh;
     grid-template-columns: 35% 65%;
     padding-top: 10vh;
     grid-template-areas: 
     't-img t-img'
     'hd hd'
     'cool img3'
-    'lst lst'
+    'txt txt'
 }
 
 .tech-image {
     grid-area: t-img;
+    background-image: url(../img/earth.jpg);
+    background-size: cover;
 }
 
 .section-header {
@@ -277,7 +280,8 @@ header h1 {
     display:flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 10vh 0 5vh black, -10vh 0 5vh black;
+    z-index: 5;
+    box-shadow: 0 0 50px black, 0 0 50px black;
 }
 
 .section-header h1 {
@@ -304,10 +308,36 @@ header h1 {
 
 .third-image img {
     width: 100%;
+    border-radius: 2vw;
 }
 
 .last-part {
-    grid-area: lst;
+    grid-area: txt;
+}
+
+.text {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(20vw);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.text div{
+    width: 50vw;
+}
+
+.text img{
+    height: 100%;
+    border-radius: 2vw;
+}
+
+.text.show {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 @media screen and (max-width: 600px) {
