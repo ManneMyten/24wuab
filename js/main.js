@@ -34,7 +34,7 @@ const observer = new IntersectionObserver(entries => {
     })
     console.log(entries)
 }, {
-    threshold: 0.7,
+    threshold: 0.5,
 })
 
 texts.forEach(text => {

@@ -87,27 +87,27 @@ header {
 }
 
 .animation-one {
-    animation: first 1s forwards;
+    animation: first 0.75s forwards;
 }
 
 .reverse-one {
-    animation: reverse-first 1s forwards;
+    animation: reverse-first 0.75s forwards;
 }
 
 .animation-two {
-    animation: second 1s forwards;
+    animation: second 0.75s forwards;
 }
 
 .reverse-two {
-    animation: reverse-second 1s forwards;
+    animation: reverse-second 0.75s forwards;
 }
 
 .animation-3 {
-    animation: third 1s forwards;
+    animation: third 0.75s forwards;
 }
 
 .reverse-3 {
-    animation: reverse-third 1s forwards;
+    animation: reverse-third 0.75s forwards;
 }
 
 @keyframes first {
@@ -152,14 +152,14 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    display: none;
-    /* background-color: transparent; */
-    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+    background-color: transparent;
     transition: all 1s; /* Få detta att funka*/
 }
 
 .visible {
-    display: block;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 6;
 }
 
 header h1 {
@@ -179,6 +179,7 @@ header h1 {
     background-image: url(../img/raket_portrait.jpg);
     background-size: cover;
     background-position: 75% 25%;
+    margin-bottom: 5vh;
 }
 
 .landing-image-scroller {
@@ -242,6 +243,14 @@ header h1 {
     /* border-style: solid;
     border-width: 0.5vw;
     border-color: #64B5F6; */
+}
+
+.card h3 {
+    padding: 1vw;
+}
+
+.card p {
+    padding: 0 1vw;
 }
 
 .card img{
@@ -327,7 +336,7 @@ header h1 {
 }
 
 .text div{
-    width: 50vw;
+    width: 50%;
 }
 
 .text img{
