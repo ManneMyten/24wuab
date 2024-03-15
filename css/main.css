@@ -234,6 +234,7 @@ header h1 {
 }
 
 .card {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     width: 20vw;
@@ -350,6 +351,54 @@ header h1 {
     transform: translateX(0);
     opacity: 1;
 }
+
+
+/* för sol-system-sidan */
+.planets-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 10vh;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.sun {
+    width: 300px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transform: translateX(250px) translateY(250px) translate(-50%, -50%);
+}
+
+.orbit {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transform: translateX(250px) translateY(250px);
+    border-style: solid;
+    border-radius: 100%;
+    border-width: 1px;
+    border-color: #e0e0e0;
+    width: calc( var(--radius) * 2);
+    height: calc(var(--radius) * 2);
+}
+
+.planet img{
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transform: translateX(calc(cos(var(--angle)) * var(--radius) * -1)) translateY(calc(sin(var(--angle)) * var(--radius) * -1)) translate(-50%, -50%) translateX(calc(var(--width) - 50px)) translateY(calc(var(--width) - 50px));
+    width: var(--width);
+}
+
+#mercury {
+    --radius: 300px;
+    --angle: 15deg;
+    --width: 150px;
+}
+
+
 
 @media screen and (max-width: 600px) {
     .menu {

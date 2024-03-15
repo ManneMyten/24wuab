@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The solar system</title>
     <link rel="stylesheet" href="css/main.css">
-    <title>SpaceY</title>
+    <script src="js/main.js" defer></script>
 </head>
 
 <body class="dark-bg">
@@ -26,28 +27,15 @@
         <h1>SpaceY</h1>
     </header>
     <div class="fade-layer"></div>
-    <div class="landing-wrapper">
 
-        <main class="landing-main"></main>
-
-        <section class="landing-image-scroller">
-            <div class="carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
-                <div class="slide-images"><img src="img/astroboy.jpg"></div>
-                <div class="slide-images"><img src="img/rockets_launching.jpg"></div>
-                <div class="slide-images"><img src="img/space_view.jpg"></div>
-            </div>
-        </section>
+    <main class="planets-wrapper">
+        <img class="sun" src="img/sun.png">
         
-        <section class="landing-link-section">
-            <h2>Pages</h2>
-            <a><img></a>
-            <a><img></a>
-            <a><img></a>
-            <a><img></a>
-        </section>
-    </div>
-    <script src="js/main.js"></script>
-    <script src="js/flickity.pkgd.js"></script>
+        <div class="planet" id="mercury">
+            <img src="img/mercury.png">
+            <div class="orbit"></div>
+        </div>
+    </main>
 </body>
 
 </html>
