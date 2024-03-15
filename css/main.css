@@ -374,7 +374,7 @@ header h1 {
     position: fixed;
     bottom: 0;
     right: 0;
-    transform: translateX(250px) translateY(250px);
+    transform: translateX(calc(var(--radius) - 50px)) translateY(calc(var(--radius) - 50px));
     border-style: solid;
     border-radius: 100%;
     border-width: 1px;
@@ -393,12 +393,22 @@ header h1 {
 }
 
 #mercury {
-    --radius: 300px;
+    --radius: 250px;
     --angle: 15deg;
-    --width: 150px;
+    --width: 120px;
 }
 
+#venus {
+    --radius: 400px;
+    --angle: 60deg;
+    --width: 90px;
+}
 
+#earth {
+    --radius: 550px;
+    --angle: 30deg;
+    --width: 150px;
+}
 
 @media screen and (max-width: 600px) {
     .menu {
