@@ -390,6 +390,36 @@ header h1 {
     right: 0;
     transform: translateX(calc(cos(var(--angle)) * var(--radius) * -1)) translateY(calc(sin(var(--angle)) * var(--radius) * -1)) translate(-50%, -50%) translateX(calc(var(--width) - 50px)) translateY(calc(var(--width) - 50px));
     width: var(--width);
+    transition: all 1.5s;
+}
+
+.planet p {
+    position: absolute;
+    width: 30vw;
+    color: transparent;
+    transform: translate(30vw, 45vh) translate(-50%, -50%);
+    transition: all 1s;
+}
+
+.zoom img {
+    --width: 50vh;
+    transform: translateY(calc(var(--width) - 45vh))  translate(-50%, -50%);
+    z-index: 4;
+}
+
+.zoom#saturn img {
+    /* transform: translateY(calc(var(--width) - 45vh))  translate(-50%, -50%) translate(calc(-0.25 * var(--width))); */
+
+}
+
+.zoom p {
+    z-index: 4;
+    color: white;
+}
+
+.fade-layer.zoom {
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3;
 }
 
 #mercury {

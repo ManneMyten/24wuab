@@ -40,3 +40,18 @@ const observer = new IntersectionObserver(entries => {
 texts.forEach(text => {
     observer.observe(text)
 })
+
+
+let mercury = document.querySelector("#mercury")
+let venus = document.querySelector("#venus")
+let earth = document.querySelector("#earth")
+let mars = document.querySelector("#mars")
+let jupiter = document.querySelector("#jupiter")
+let saturn = document.querySelector("#saturn")
+let uranus = document.querySelector("#uranus")
+let neptune = document.querySelector("#neptune")
+
+function zoom(planet){
+    planet.classList.toggle("zoom")
+    fade_layer.classList.toggle("zoom")
+}
