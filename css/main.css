@@ -154,7 +154,7 @@ header {
     bottom: 0;
     z-index: -1;
     background-color: transparent;
-    transition: all 1s; /* Få detta att funka*/
+    transition: all 1s;
 }
 
 .visible {
@@ -205,9 +205,22 @@ header h1 {
     align-content: center;
 }
 
-.landing-link-section {
+.landing-links {
     height: 110vh;
     margin-top: 5vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.landing-links a {
+    width: 25vw;
+    height: 80vh;
+}
+
+.landing-links h2 {
+    /* width: 100%; */
+    align-self: flex-start;
 }
 
 
@@ -226,7 +239,7 @@ header h1 {
 }
 
 .card-wrapper {
-    height: 150vh;
+    height: 160vh;
     display: flex;
     justify-content: space-around;
     align-content: space-around;
@@ -238,7 +251,7 @@ header h1 {
     display: flex;
     flex-direction: column;
     width: 20vw;
-    height: 70vh;
+    height: 75vh;
     margin: 0 3vw;
     border-radius: 3vw;
     overflow: hidden;
@@ -408,8 +421,8 @@ header h1 {
 }
 
 .zoom#saturn img {
-    /* transform: translateY(calc(var(--width) - 45vh))  translate(-50%, -50%) translate(calc(-0.25 * var(--width))); */
-
+    --width: 70vh;
+    transform: translateY(calc(0.5 * var(--width) - 45vh))  translate(-50%, -50%);
 }
 
 .zoom p {
@@ -417,10 +430,6 @@ header h1 {
     color: white;
 }
 
-.fade-layer.zoom {
-    background-color: rgba(0,0,0,0.5);
-    z-index: 3;
-}
 
 #mercury {
     --radius: 220px;
@@ -454,12 +463,12 @@ header h1 {
 
 #saturn {
     --radius: 790px;
-    --angle: 30deg;
+    --angle: 20deg;
     --width: 240px;
 }
 
 #saturn img {
-    transform: translateX(calc(cos(var(--angle)) * var(--radius) * -1)) translateY(calc(sin(var(--angle)) * var(--radius) * -1)) translate(-50%, -50%) translateX(calc(var(--width) - 50px)) translateY(calc(var(--width) - 50px)) translate(-60px);
+    transform: translateX(calc(cos(var(--angle)) * var(--radius) * -1)) translateY(calc(sin(var(--angle)) * var(--radius) * -1)) translate(-50%, -50%) translateX(calc(var(--width) - 50px)) translateY(calc((0.5 * var(--width)) - 50px));
 }
 
 #uranus {
@@ -470,8 +479,24 @@ header h1 {
 
 #neptune {
     --radius: 1050px;
-    --angle: 18deg;
+    --angle: 17deg;
     --width: 150px;
+}
+
+.fade-layer2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: transparent;
+    transition: background-color, 1s;
+}
+
+.fade-layer2.zoom {
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3;
 }
 
 @media screen and (max-width: 600px) {

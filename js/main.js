@@ -50,8 +50,14 @@ let jupiter = document.querySelector("#jupiter")
 let saturn = document.querySelector("#saturn")
 let uranus = document.querySelector("#uranus")
 let neptune = document.querySelector("#neptune")
+let fadeLayer2 = document.querySelector(".fade-layer2")
 
 function zoom(planet){
+    // if (planet == 'fade'){
+    //     document.querySelectorAll('.zoom').forEach(el => el.classList.remove('zoom'))
+    // }
     planet.classList.toggle("zoom")
-    fade_layer.classList.toggle("zoom")
+    fadeLayer2.classList.toggle("zoom")
 }
+
+// fadeLayer2.addEventListener("click", zoom(fade) )
