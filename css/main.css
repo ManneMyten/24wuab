@@ -259,9 +259,21 @@ header h1 {
     align-content: center;
 }
 
-.flickity-page-dots .dot {
+/* .flickity-page-dots .dot {
     background-color: white;
+} */
+
+.flickity-page-dots .dot.is-selected {
+    background: white;
 }
+
+.flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid white;
+  }
 
 .landing-links {
     height: 110vh;
@@ -283,13 +295,15 @@ header h1 {
 
 .landing-links a img {
     width: 100%;
-    object-fit: contain;
+    object-fit: fill;
 }
 
-.landing-links h1 {
+.links-text {
+    display: flex;
     min-width: 6vw;
     margin: 0 35vw;
-    align-self: flex-start;
+    align-items: center;
+    /* align-self: flex-start; */
 }
 
 
@@ -703,6 +717,28 @@ header h1 {
     }
 
 
+    .landing-image-scroller {
+        height: auto;
+    }
+
+    .slide-images {
+        box-sizing: border-box;
+        padding: 0 10vw;
+        height: auto;
+    }
+
+    .slide-images img {
+        max-width: 100%;
+
+    }
+
+    .landing-links a {
+        width: 70vw;
+        height: 60vh;
+        margin: 20px;
+    }
+
+
 
     .pre-text {
         padding: 0 10%;
@@ -721,7 +757,7 @@ header h1 {
     .card h3 {
         padding: 3vw;
     }
-    
+
     .card p {
         padding: 0 3vw;
     }
@@ -738,7 +774,7 @@ header h1 {
     .container {
         display: grid;
         width: 100%;
-        grid-template-rows: 90vh 30vh 70vh 80vh auto;
+        grid-template-rows: 90vh 30vh 80vh 80vh auto;
         grid-template-columns: 100%;
         padding-top: 10vh;
         grid-template-areas:
