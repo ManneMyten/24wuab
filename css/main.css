@@ -642,7 +642,7 @@ header h1 {
     }
 
     .burger {
-        margin: 17px 25%;
+        margin: 13px 25%;
         width: 50%;
     }
 
@@ -652,21 +652,21 @@ header h1 {
         }
 
         50% {
-            transform: translateY(21px)
+            transform: translateY(17px)
         }
 
         100% {
-            transform: translateY(21px) rotate(45deg);
+            transform: translateY(17px) rotate(45deg);
         }
     }
 
     @keyframes reverse-first {
         0% {
-            transform: translateY(21px) rotate(45deg);
+            transform: translateY(17px) rotate(45deg);
         }
 
         50% {
-            transform: translateY(21px)
+            transform: translateY(17px)
         }
 
         100% {
@@ -680,21 +680,21 @@ header h1 {
         }
 
         50% {
-            transform: translateY(-21px)
+            transform: translateY(-17px)
         }
 
         100% {
-            transform: translateY(-21px) rotate(45deg);
+            transform: translateY(-17px) rotate(45deg);
         }
     }
 
     @keyframes reverse-third {
         0% {
-            transform: translateY(-21px) rotate(45deg);
+            transform: translateY(-17px) rotate(45deg);
         }
 
         50% {
-            transform: translateY(-21px)
+            transform: translateY(-17px)
         }
 
         100% {
@@ -709,15 +709,26 @@ header h1 {
     }
 
     .card-wrapper {
-        height: 150vh;
+        height: auto;
     }
 
     .card {
-        width: 40vw;
-        height: 40vh;
+        width: 70vw;
+        height: 70vh;
+        margin: 4vh 3vw;
     }
 
+    .card h3 {
+        padding: 3vw;
+    }
+    
+    .card p {
+        padding: 0 3vw;
+    }
 
+    #europa-card img {
+        height: 17vh;
+    }
 
 
 
