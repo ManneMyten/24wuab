@@ -9,15 +9,12 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js" defer></script>
     <title>SpaceY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 
 <body class="dark-bg">
-    <nav class="menu light-bg">
-        <a href="index.html">Home</a>
-        <a href="news.html">Space news</a>
-        <a href="about.html">About SpaceY</a>
-        <a href="space.html">The solar system</a>
-    </nav>
     <header class="dark-bg">
         <div class="menu-button">
             <div class="burger reverse-one" id="burger-one"></div>
@@ -26,6 +23,12 @@
         </div>
         <h1>SpaceY</h1>
     </header>
+    <nav class="menu medium-bg rubrik">
+        <a href="index.html"><h2>Home</h2></a>
+        <a href="news.html"><h2>Space news</h2></a>
+        <a href="about.html"><h2>About SpaceY</h2></a>
+        <a href="space.html"><h2>The solar system</h2></a>
+    </nav>
     <div class="fade-layer"></div>
     <div class="landing-wrapper">
 
@@ -38,12 +41,20 @@
                 <div class="slide-images"><img src="img/space_view.jpg" alt="Earth from space"></div>
             </div>
         </section>
-        
+
         <section class="landing-links">
-            <div class="links-text"><h1 class="secondary-text">Read more!</h1></div>
-            <a href="about.html" class="medium-bg"><h2>About us</h2><img src="img/space-hub.jpg" alt="space-hub"></a>
-            <a href="news.html" class="medium-bg"><h2>Space news</h2><img src="img/moonboy.jpg" alt="astronaut on the moon"></a>
-            <a href="space.html" class="medium-bg"><h2>The solar system</h2><img src="img/starfall.jpg" alt="falling star"></a>
+            <div class="links-text">
+                <h1>Read more!</h1>
+            </div>
+            <a href="about.html" class="medium-bg">
+                <h3 class="rubrik">About us</h3><img src="img/space-hub.jpg" alt="space-hub">
+            </a>
+            <a href="news.html" class="medium-bg">
+                <h3 class="rubrik">Space news</h3><img src="img/moonboy.jpg" alt="astronaut on the moon">
+            </a>
+            <a href="space.html" class="medium-bg">
+                <h3 class="rubrik">The solar system</h3><img src="img/starfall.jpg" alt="falling star">
+            </a>
         </section>
     </div>
 </body>
