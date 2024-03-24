@@ -532,6 +532,10 @@ header h1 {
     transition: all 1.5s;
 }
 
+.planet h2 {
+    display: none;
+}
+
 .planet p {
     position: absolute;
     width: 30vw;
@@ -745,6 +749,7 @@ header h1 {
         width: 70vw;
         height: 60vh;
         margin: 20px;
+        border-radius: 3vw;
     }
 
 
@@ -785,7 +790,7 @@ header h1 {
     .container {
         display: grid;
         width: 100%;
-        grid-template-rows: 90vh 30vh 80vh 80vh auto;
+        grid-template-rows: 90vh 30vh 80vh 85vh auto;
         grid-template-columns: 100%;
         padding-top: 10vh;
         grid-template-areas:
@@ -804,7 +809,7 @@ header h1 {
     .sticky p,
     .third-image h3,
     .third-image p {
-        padding: 0 5%;
+        padding: 1vh 5%;
     }
 
     .last-part {
@@ -822,6 +827,11 @@ header h1 {
 
     .text div {
         width: 90%;
+        margin: 2vh 0;
+    }
+
+    .text div h3 {
+        margin: 2vh 0;
     }
 
     .text img {
@@ -857,15 +867,26 @@ header h1 {
     }
 
     .orbit {
-        display: none;
+        position: static;
+        transform: none;
+        border-radius: 0;
+        border-width: 1px;
+        width: 100%;
+        height: 0px;
+        margin-bottom: 5vh;
     }
 
     .planet {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        align-content: space-between;
         width: 100%;
         padding: 6vh 0;
+    }
+
+    .planet h2 {
+        display: block;
     }
 
     .planet img {
