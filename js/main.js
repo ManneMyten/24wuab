@@ -10,7 +10,6 @@ let burgerthree = document.querySelector("#burger-three")
 function show(){
     menu.classList.toggle("show")
     fade_layer.classList.toggle("visible")
-    // header.classList.toggle("visible")
 
     burgerone.classList.toggle("animation-one")
     burgerone.classList.toggle("reverse-one")
@@ -53,11 +52,6 @@ let neptune = document.querySelector("#neptune")
 let fadeLayer2 = document.querySelector(".fade-layer2")
 
 function zoom(planet){
-    // if (planet == 'fade'){
-    //     document.querySelectorAll('.zoom').forEach(el => el.classList.remove('zoom'))
-    // }
     planet.classList.toggle("zoom")
     fadeLayer2.classList.toggle("zoom")
 }
-
-// fadeLayer2.addEventListener("click", zoom(fade) )

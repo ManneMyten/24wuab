@@ -418,7 +418,7 @@ header h1 {
 }
 
 #europa-card img {
-    width: auto;
+    object-fit: cover;
     height: 25vh;
 }
 
@@ -483,7 +483,7 @@ header h1 {
 .third-image p,
 .sticky p,
 .sticky h3 {
-    padding: 0 1.5vw;
+    padding: 2vh 1.5vw;
 }
 
 .sticky img,
@@ -806,7 +806,7 @@ header h1 {
     }
 
     .card {
-        width: 70vw;
+        width: 85vw;
         border-radius: 3vw;
         margin: 4vh 3vw;
     }
@@ -819,10 +819,6 @@ header h1 {
         padding: 0 3vw;
     }
 
-    #europa-card img {
-        height: 17vh;
-    }
-
 
 
 
@@ -831,7 +827,7 @@ header h1 {
     .container {
         display: grid;
         width: 100%;
-        grid-template-rows: 90vh 30vh 80vh 85vh auto;
+        grid-template-rows: 90vh 30vh 85vh 90vh auto;
         grid-template-columns: 100%;
         padding-top: 10vh;
         grid-template-areas:
