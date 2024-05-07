@@ -75,17 +75,26 @@ h2,
 
 .menu {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 90vh;
-    width: 30vw;
-    left: -30vw;
+    align-items: right;
+    justify-content: space-between;
+    height: 7vh;
+    width: 100%;
+    /* left: -30vw; */
     margin-top: 10vh;
     position: fixed;
     top: 0;
     z-index: 4;
     transition: left 1s;
+}
+
+.menu a {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu a:first-child {
+    display: none;
 }
 
 .show {
@@ -97,7 +106,7 @@ header {
     width: 100%;
     height: 10vh;
     position: fixed;
-    justify-content: flex-start;
+    justify-content: center;
     z-index: 5;
     transition: all 1s;
 }
@@ -107,12 +116,14 @@ header h1 {
     font-size: 3rem;
     font-style: italic;
     max-height: 11vh;
+    color: white;
 }
 
 .menu-button {
     width: 10%;
     height: 10vh;
     z-index: 6;
+    display: none;
 }
 
 .burger {
@@ -362,7 +373,7 @@ header h1 {
 */
 .news {
     width: 100%;
-    padding-top: 15vh;
+    padding-top: 20vh;
 }
 
 .pre-text {
@@ -510,6 +521,8 @@ header h1 {
     transform: translateX(20vw);
     opacity: 0;
     transition: all 1s;
+    border: 1px solid #EB4A21;
+    border-left: none;
 }
 
 .text div {
@@ -685,6 +698,10 @@ header h1 {
     .menu {
         width: 70vw;
         left: -70vw;
+        height: 90vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
     }
 
     h2 {
@@ -699,9 +716,18 @@ header h1 {
         left: 0;
     }
 
+    .menu a:first-child {
+        display: block;
+    }
+
     .menu-button {
         width: 10vh;
         padding-top: 10px;
+        display: block;
+    }
+
+    header {
+        justify-content: flex-start;
     }
 
     .burger {
